@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
     const searchInput = search.value
 
-    fetch('http://localhost:3000/weather?address=' + searchInput).then((response => {
+    fetch('/weather?address=' + searchInput).then((response => {
     response.json().then((data) => {
         if (data.error) {
             console.log(data.error)
